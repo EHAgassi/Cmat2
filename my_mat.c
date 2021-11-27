@@ -4,8 +4,8 @@
 int i,j;
 
 void creat_mat(int mat1[][T]){ // func #1
-    for(int i; i<T;i++ ){
-        for(int j; j<T;j++ ){
+    for(int i=0; i<T;i++ ){
+        for(int j=0; j<T;j++ ){
             int c;
             scanf("%d",&c);
             mat1[i][j] = c;
