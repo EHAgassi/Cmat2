@@ -1,16 +1,16 @@
 #include <stdio.h>
- #include "my_mat.h"
+#include "my_mat.h"
 
 
 int main(){
-char input;
+char input = 1;
 int mat1 [T][T] = {0};
 scanf ("%c", &input);
 while ( input!='D')
 {
     if (input == 'A')
     {
-     creat_mat(mat1);
+        creat_mat(mat1);
     }
     if (input == 'B')
     {

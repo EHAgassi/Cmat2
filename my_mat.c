@@ -26,16 +26,15 @@ void path (int mat1[][T], int i, int j){// func #2
         }
 }
 
-void shortest(int a){
-   
-          
-        if (a!=0)
-        {
-            printf("%d\n" ,a);
-        }
-        else{
-              printf("-1\n");
-        }
+void shortest(int a){        
+    if (a!=0)
+    {
+        printf("%d\n" ,a);
+    }
+    else
+    {
+        printf("%d\n",-1);
+    }
  }
 
 // void print(int arr[][T]){
