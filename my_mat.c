@@ -50,14 +50,11 @@ void print(int arr[][T]){
 
 
 void FWA(int mat1[][T]){
-    int k =0;
-     while(k < T){
-        for(int i=1; i<T;i++ ){
-            for(int j=1; j<T;j++ ){
+      for(int k=0; k<T;k++ ){
+        for(int i=0; i<T;i++ ){
+            for(int j=0; j<T;j++ ){
                 if (i!=j && i!=k && j!=k && mat1[i][k]!=0 &&mat1[k][j]!=0){ 
-                    
                       mat1[i][j] = Min(mat1[i][j], (mat1[i][k]+mat1[k][j]));
-                    
                 }
             }
         }
