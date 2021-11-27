@@ -14,9 +14,8 @@ void creat_mat(int mat1[][T]){ // func #1
     FWA(mat1);
 }
 
-void path (int mat1[][T]){// func #2
+void path (int mat1[][T], int i, int j){// func #2
   
-    scanf("%d%d",&i,&j);
          if (mat1[i][j]!=0)
         {
             printf("True\n");
@@ -27,26 +26,26 @@ void path (int mat1[][T]){// func #2
         }
 }
 
-void shortest(int mat1[][T]){
-        scanf("%d%d",&i,&j);
+void shortest(int a){
+   
           
-        if (mat1[i][j]!=0)
+        if (a!=0)
         {
-            printf("%d\n" ,&mat1[i][j]);
+            printf("%d\n" ,a);
         }
         else{
               printf("-1\n");
         }
  }
 
-void print(int arr[][T]){
-    for(int i=0; i<T;i++){
-        for(int j=0; j<T;j++ ){
-            printf("%d ,", arr[i][j]);
-        }
-         printf("\n");
-    }       
-}
+// void print(int arr[][T]){
+//     for(int i=0; i<T;i++){
+//         for(int j=0; j<T;j++ ){
+//             printf("%d ,", arr[i][j]);
+//         }
+//          printf("\n");
+//     }       
+// }
 
 
 void FWA(int mat1[][T]){

@@ -11,15 +11,19 @@ while ( input!='D')
     if (input == 'A')
     {
      creat_mat(mat1);
-     FWA(mat1);
     }
-    else if (input == 'B')
+    if (input == 'B')
     {
-       path(mat1);
+        int a,b;
+        scanf("%d", &a);
+        scanf("%d", &b);
+       path(mat1, a ,b );
     }
      else if (input == 'C')
     {
-        shortest(mat1);
+        int i,j;
+        scanf("%d%d",&i,&j);
+        shortest(mat1[i][j]);
     }
     
  scanf("%c",&input) ;  
