@@ -7,7 +7,8 @@ void creat_mat(int mat1[][T]){ // func #1
     for(int i; i<T;i++ ){
         for(int j; j<T;j++ ){
             int c;
-            mat1[i][j] = scanf("%d",&c);
+            scanf("%d",&c);
+            mat1[i][j] = c;
         }
     }
     FWA(mat1);
@@ -18,10 +19,11 @@ void path (int mat1[][T]){// func #2
     scanf("%d%d",&i,&j);
          if (mat1[i][j]!=0)
         {
-            printf("\nTrue");
+            printf("True\n");
+            return;
         }
         else{
-              printf("\nFauls");
+              printf("False\n");
         }
 }
 
@@ -30,10 +32,10 @@ void shortest(int mat1[][T]){
           
         if (mat1[i][j]!=0)
         {
-            printf("\n %d" ,mat1[i][j]);
+            printf("%d\n" ,&mat1[i][j]);
         }
         else{
-              printf("\n-1");
+              printf("-1\n");
         }
  }
 
@@ -48,13 +50,14 @@ void print(int arr[][T]){
 
 
 void FWA(int mat1[][T]){
-    for(int k=1;k<T;k++){
+    int k =0;
+     while(k < T){
         for(int i=1; i<T;i++ ){
             for(int j=1; j<T;j++ ){
-                if (i!=j && i!=k && j!=k){ 
-                    if (mat1[i][k]!=0 &&mat1[k][j]!=0){
+                if (i!=j && i!=k && j!=k && mat1[i][k]!=0 &&mat1[k][j]!=0){ 
+                    
                       mat1[i][j] = Min(mat1[i][j], (mat1[i][k]+mat1[k][j]));
-                    }
+                    
                 }
             }
         }
@@ -64,8 +67,12 @@ void FWA(int mat1[][T]){
 
 int Min (int a,int b){
         if (a == 0) return b;
-        if (b == 0) return a;
-        return a>b ? b :a;
+        else if (b == 0) return a;
+        if  (a>b){
+            return b;
+        }
+        return a;
+        // return a>b ? b : a;
     }
 
 

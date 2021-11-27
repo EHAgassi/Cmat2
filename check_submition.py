@@ -43,7 +43,7 @@ def test_extra_compilation(target):
     if len(lines) > 1 or "gcc " in lines[0] or "ar " in lines[0] :
         print("unneeded recompilation happand for target " ,target) 
         passed = 0
-    run_cmd("rm compilation_out.txt" , 0)
+    # run_cmd("rm compilation_out.txt" , 0)
     
 
 def test_output_vs_expected(prog , input_f , expected_f):

@@ -1,4 +1,4 @@
-#define T 10
+    #define T 10
 #define myArr int mat1[][T]
 void creat_mat(myArr); //func #1
 void path(myArr); //func #2
