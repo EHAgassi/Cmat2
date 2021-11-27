@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "my_mat.h"
 #define T 10
-int i,j;
 
 void creat_mat(int mat1[][T]){ // func #1
     for(int i=0; i<T;i++ ){
@@ -15,7 +14,6 @@ void creat_mat(int mat1[][T]){ // func #1
 }
 
 void path (int mat1[][T], int i, int j){// func #2
-  
          if (mat1[i][j]!=0)
         {
             printf("True\n");
@@ -37,15 +35,6 @@ void shortest(int a){
     }
  }
 
-// void print(int arr[][T]){
-//     for(int i=0; i<T;i++){
-//         for(int j=0; j<T;j++ ){
-//             printf("%d ,", arr[i][j]);
-//         }
-//          printf("\n");
-//     }       
-// }
-
 
 void FWA(int mat1[][T]){
       for(int k=0; k<T;k++ ){
@@ -63,22 +52,8 @@ void FWA(int mat1[][T]){
 int Min (int a,int b){
         if (a == 0) return b;
         else if (b == 0) return a;
-        if  (a>b){
-            return b;
-        }
-        return a;
-        // return a>b ? b : a;
+        return a>b ? b : a;
     }
 
 
-
-// int main(){
-//     int arr[][10] = {0 ,3,1 ,0 ,0 ,2 ,0 ,0 ,0 ,0, 3, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ,0 ,5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 1, 2, 0 ,0 ,0 ,0 ,0 ,2 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,0 ,2 ,0 ,0 ,0 ,0 ,0 ,0, 0, 5, 4 ,0 ,0 ,0 ,0 ,2 ,0 ,0 ,0 ,0 ,1 ,0 ,0 ,0 ,0 ,0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0}; 
-//     print(arr);
-//     FWA(arr);
-//     printf("\n");
-//     print(arr);
-
- 
-// }
 

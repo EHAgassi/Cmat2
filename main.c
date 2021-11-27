@@ -15,9 +15,8 @@ while ( input!='D')
     if (input == 'B')
     {
         int a,b;
-        scanf("%d", &a);
-        scanf("%d", &b);
-       path(mat1, a ,b );
+        scanf("%d%d", &a, &b);
+        path(mat1, a ,b );
     }
      else if (input == 'C')
     {
